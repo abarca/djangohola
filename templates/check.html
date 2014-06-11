@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: gray;">
+<div class="container">
+    <div class="row">
+
+            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/600px-Wikimedia-logo.svg.png" width="120" height="120">
+
+    </div>
+    <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+            <h1>{% block titulo %} Registro Entrada/Salida{% endblock titulo %}</h1>
+
+            {% block contenido %}
+            <form method="POST" >{% csrf_token %}
+              {{ formulario }}
+              <input type="submit" value="Enviar" class="btn btn-default" />
+            </form>
+
+            {% endblock contenido %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DATOS DEL ALUMNO</title>
+    <meta charset="utf-8">
+
+</head>
+<body>
+    <h1>DATOS DEL ALUMNO</h1>
+    {%for elemento in lista%}
+    <ul>
+        <li><strong>{{elemento.nombre}}</strong></li>
+        <li>{{elemento.apellido}}</li>
+        <li>{{elemento.direccion}}</li>
+        <li>{{elemento.edad}}</li>
+        <li>{{elemento.telefono}}</li>
+        <li>{{elemento.sexo}}</li>
+        <li>{{elemento.ciudad}}</li>
+        <li>{{elemento.estado}}</li>
+        <li>{{elemento.estado_civil}}</li>
+        <li>{{elemento.estudios}}</li>
+        <li>{{elemento.foto}}</li>
+
+
+    </ul>
+    {% endfor %}
+</body>
+</html>
